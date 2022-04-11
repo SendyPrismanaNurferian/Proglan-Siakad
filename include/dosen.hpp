@@ -11,14 +11,15 @@ private:
 	std::string pendidikan;
 
 public:
-	dosen(std::string id, std::string nama, int dd, int mm, int yy, std::string npp, std::string departemen, std::string pendidikan);
-
+	dosen(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy, 
+				std::string npp, std::string departemen, std::string pendidikan); //ada penambahan jenis kelamin yang saya buat
+//untuk bisa mengakses NPP
     void setNPP(std::string npp);
     std::string getNPP();
-
+//untuk bisa mengakses Departemen
     void setDepartemen(std::string departemen);
     std::string getDepartemen();
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	void setPendidikan(std::string pendidikan);
 	std::string getPendidikan();
 };

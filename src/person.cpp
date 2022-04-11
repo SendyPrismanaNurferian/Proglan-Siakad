@@ -1,12 +1,12 @@
 #include <iostream>
 #include "include/person.hpp"
 
-
-person::person(std::string id, std::string nama, int dd, int mm, int yy)
-		: id(id), nama(nama), dd(dd), mm(mm), yy(yy)
+//ada penambahan jenis kelamin yang saya buat
+person::person(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy)
+		: id(id), nama(nama), jeniskelamin(jeniskelamin), dd(dd), mm(mm), yy(yy)
 {
 }
-
+//Inisialisasi fungsi versi saya
 void person::setId(std::string id)
 {
 	this->id = id;
@@ -25,6 +25,11 @@ void person::setNama(std::string nama)
 std::string person::getNama()
 {
 	return this->nama;
+}
+
+std::string person::getjeniskelamin()
+{
+	return this->jeniskelamin;
 }
 
 void person::setTglLahir(int dd, int mm, int yy)

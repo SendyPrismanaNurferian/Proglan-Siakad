@@ -2,10 +2,11 @@
 #include <vector>
 #include "include/mahasiswa.hpp"
 
-
-mahasiswa::mahasiswa(std::string id, std::string nama, int dd, int mm, int yy, 
+//ada penambahan jenis kelamin yang saya buat
+mahasiswa::mahasiswa(std::string id, std::string nama, std::string jeniskelamin, int dd, int mm, int yy, 
 				std::string nrp, std::string departemen, int tahunmasuk)
-		: person(id, nama, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk)
+		: person(id, nama, jeniskelamin, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk)
+
 {
 	this->ipk = 0.0;
 	this->semesterke = 1;
@@ -13,7 +14,7 @@ mahasiswa::mahasiswa(std::string id, std::string nama, int dd, int mm, int yy,
 
 	this->ips = std::vector<float>(14,0);
 }
-
+//Inisialisasi fungsi versi saya  
 void mahasiswa::setNRP(std::string nrp)
 {
     this->nrp = nrp;
@@ -63,7 +64,7 @@ int mahasiswa::getSKSLulus()
 {
 	return this->skslulus;
 }
-
+////////////////////////////////////////////////////////////////////////////////////////////
 void mahasiswa::hitungIPK()
 {
 }
